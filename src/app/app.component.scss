@@ -3,23 +3,11 @@
     height: 100%;
     .sidenav {
         width: 175px;
-        padding-top: 80px;
         background-color: #3F51B5;
-        padding-left: 4px;
-        display: flex;
-        flex-direction: column;
         img {
             width: 135px;
-            position: absolute;
-            top: 16px;
-            left: 20px;
-        }
-        .sidenav-button {
-            color: white;
-            mat-icon {
-               padding-right: 10px;
-               
-            }
+            margin-top: 16px;
+            margin-left: 16px;
         }
     }
     .router-container{
