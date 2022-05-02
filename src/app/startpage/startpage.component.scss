@@ -29,6 +29,10 @@
             margin-right: 20px;
             margin-bottom: 20px;
             min-width: 200px;
+            .checkbox-container {
+                height: 100%;
+                padding-right: 16px;
+            }
             .delete-button {
                 z-index: -3;
                 margin-left: 20px;
@@ -51,5 +55,13 @@
 
 .activeButton{
     z-index: 0 !important;
+}
+
+.taskDone {
+    background-color: lightgray;
+}
+
+.checkboxActive {
+    background-image: url(../../assets/img/done.png);
 }
 

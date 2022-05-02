@@ -12,7 +12,6 @@ import { StartpageComponent } from './startpage/startpage.component';
 import { BinComponent } from './bin/bin.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -20,6 +19,7 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatSidenavModule,
     MatInputModule,
     MatCardModule,
-    MatListModule,
+    MatCheckboxModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
