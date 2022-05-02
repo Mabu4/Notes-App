@@ -3,10 +3,20 @@
 
 <mat-drawer-container class="navigation-container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
-    <button mat-icon-button class="sidenav-button">
-      <mat-icon>checklist</mat-icon>
-      Notizen
-    </button>
+    <img src="../assets/img/logo.png" alt="Logo Stashcat">
+    <div>
+      <button mat-icon-button class="sidenav-button">
+        <mat-icon>checklist</mat-icon>
+        Notizen
+      </button>
+    </div>
+    <div>
+      <button mat-icon-button class="sidenav-button">
+        <mat-icon>delete</mat-icon>
+        Papierkorb
+      </button>
+    </div>
+    
   </mat-drawer>
 
   <div class="example-sidenav-content">
@@ -18,9 +28,11 @@
         </button>
       <span>ToDo-List</span>
     </mat-toolbar>
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
 </mat-drawer-container>
 
 
-<router-outlet></router-outlet>

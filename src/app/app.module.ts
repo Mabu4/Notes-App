@@ -9,11 +9,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { StartpageComponent } from './startpage/startpage.component';
+import { BinComponent } from './bin/bin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StartpageComponent
+    StartpageComponent,
+    BinComponent
   ],
   imports: [
     BrowserModule,
