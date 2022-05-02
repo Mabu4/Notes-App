@@ -1,1 +1,42 @@
-<h1>Startseite</h1>
+<div class="notes">
+    <mat-card class="note-form">
+        <div class="note-form-input-container">
+            <mat-form-field appearance="standard">
+                <mat-label>Titel</mat-label>
+                <input matInput [(ngModel)]="task.title">
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+                <mat-label>Beschreibung</mat-label>
+                <input matInput [(ngModel)]="task.description">
+            </mat-form-field>
+        </div>
+        <div>
+            <button (click)="addTask()" mat-raised-button color="primary">Hinzufügen</button>
+        </div>
+        
+    </mat-card>
+    <section class="tasks-container">
+        <mat-card *ngFor="let note of tasks; let i = index">
+            <div>
+                <h2 class="tasks-content">
+                    <input matInput type="text" [ngModel]="note['title']" (ngModelChange)="titleInProgress[i] = true; editText($event, i, 'title')">
+                    <button (click)="saveChanges(i)" [class.activeButton]="titleInProgress[i]" mat-mini-fab color="primary">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                </h2>
+                <p class="tasks-content">
+                    <input matInput type="text" [ngModel]="note['description']" (ngModelChange)="descriptionInProgress[i] = true; editText($event, i, 'description')">
+                    <button (click)="saveChanges(i)" mat-mini-fab color="primary" [class.activeButton]="descriptionInProgress[i]">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                </p>
+            </div>
+            <button class="delete-button" mat-mini-fab color="warn">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-card>
+    </section>
+</div>
+
+
+

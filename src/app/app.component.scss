@@ -5,7 +5,7 @@
         width: 175px;
         padding-top: 80px;
         background-color: #3F51B5;
-        padding-left: 24px;
+        padding-left: 4px;
         display: flex;
         flex-direction: column;
         img {
@@ -16,7 +16,14 @@
         }
         .sidenav-button {
             color: white;
+            mat-icon {
+               padding-right: 10px;
+               
+            }
         }
+    }
+    .router-container{
+        padding: 40px 20px;
     }
 }
 

@@ -1,0 +1,55 @@
+
+.notes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .note-form {
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .note-form-input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            mat-form-field {
+                width: 300px;
+            }
+        }
+    }
+    .tasks-container {
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        mat-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            min-width: 200px;
+            .delete-button {
+                z-index: -3;
+                margin-left: 20px;
+            }
+            &:hover{
+                .delete-button{
+                    z-index: 0;
+                }
+            }
+            .tasks-content{
+                display: flex;
+                button {
+                    margin-left: 20px;
+                    z-index: -3;
+                }
+            }
+        }
+    }
+}
+
+.activeButton{
+    z-index: 0 !important;
+}
+

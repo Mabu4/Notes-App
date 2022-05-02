@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "stashcat-testaufgabe": {
+      "hosting": {
+        "stashcat-testaufgabe": [
+          "stashcat-testaufgabe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "stashcat-testaufgabe"
+  }
+}
