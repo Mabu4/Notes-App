@@ -1,24 +1,12 @@
 
 
+<mat-toolbar color="primary">
+  <img class="logo" src="../assets/img/logo.png" alt="">
+</mat-toolbar>
+<div class="router-container">
+  <router-outlet>
 
-<mat-drawer-container class="navigation-container" autosize>
-  <mat-drawer #drawer class="sidenav" mode="side">
-    <img src="../assets/img/logo.png" alt="Logo Stashcat">
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <mat-toolbar color="primary">
-        <button type="button" mat-icon-button (click)="drawer.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      <span>ToDo-List</span>
-    </mat-toolbar>
-    <div class="router-container">
-      <router-outlet>
-
-      </router-outlet>
-    </div>
-  </div>
-</mat-drawer-container>
+  </router-outlet>
+</div>
 
 
