@@ -115,6 +115,5 @@ export class StartpageComponent implements OnInit {
     let openTasks = openTasksUnsorted.sort((a,b)=> b.date - a.date);
     let doneTasks = doneTasksUnsorted.sort((a,b)=> b.date - a.date);
     this.tasks = [...openTasks, ...doneTasks];
-    console.log(this.tasks);
   }
 }

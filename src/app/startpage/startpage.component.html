@@ -27,7 +27,7 @@
                     </button>
                 </h2>
                 <p class="tasks-content">
-                    <input [disabled]="note.checked" matInput type="text" [ngModel]="note['description']" (ngModelChange)="descriptionInProgress[i] = true; editText($event, i, 'description')">
+                    <textarea [disabled]="note.checked" matInput type="text" [ngModel]="note['description']" (ngModelChange)="descriptionInProgress[i] = true; editText($event, i, 'description')"></textarea>
                     <button (click)="saveChanges(i, 'description')" mat-mini-fab color="primary" [class.activeButton]="descriptionInProgress[i]">
                         <mat-icon>done</mat-icon>
                     </button>

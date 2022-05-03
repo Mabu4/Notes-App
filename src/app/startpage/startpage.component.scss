@@ -4,7 +4,8 @@
     align-items: center;
     flex-direction: column;
     .note-form {
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -15,6 +16,9 @@
             mat-form-field {
                 width: 300px;
             }
+        }
+        @media(max-width: 500px){
+            flex-direction: column;
         }
     }
     .tasks-container {
@@ -28,7 +32,7 @@
             justify-content: space-between;
             margin-right: 20px;
             margin-bottom: 20px;
-            min-width: 200px;
+            max-width: 300px;
             .checkbox-container {
                 height: 100%;
                 padding-right: 16px;
@@ -48,6 +52,15 @@
                     margin-left: 20px;
                     z-index: -3;
                 }
+                input {
+                    min-width: 100px;
+                }
+                textarea {
+                    resize: none;
+                }
+            }
+            @media(max-width: 500px){
+                margin-right: 0;
             }
         }
     }
