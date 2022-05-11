@@ -63,4 +63,8 @@ export class TaskListComponent implements OnInit {
       task.description = event;
     }
   }
+
+  trackByFn(item){
+    return item.customIdName;
+  }
 }

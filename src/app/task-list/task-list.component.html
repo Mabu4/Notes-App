@@ -1,5 +1,5 @@
 <section class="tasks-container">
-    <mat-card *ngFor="let note of tasks; let i = index" [class.taskDone]="note.checked">
+    <mat-card *ngFor="let note of tasks; let i = index; trackBy: trackByFn" [class.taskDone]="note.checked">
         <div class="checkbox-container">
             <mat-checkbox [disabled]="note.checked" color="primary" [(ngModel)]="note.checked" (ngModelChange)="changeStatus(note.customIdName)"></mat-checkbox>
         </div>
