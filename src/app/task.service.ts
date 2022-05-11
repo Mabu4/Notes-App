@@ -46,16 +46,6 @@ export class TaskService {
   }
 
 
-  changeStatus(id: any, task: any){
-    task.checked = true;
-    task.date = new Date().getTime();
-    this.firestore
-    .collection('tasks')
-    .doc(id)
-    .update(task[0])
-  }
-
-
   sortTasks(unsortedTasks){
     let openTasksUnsorted = unsortedTasks.filter((task) => task.checked === false);
     let doneTasksUnsorted = unsortedTasks.filter((task) => task.checked === true);

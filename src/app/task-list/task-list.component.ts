@@ -15,7 +15,6 @@ export class TaskListComponent implements OnInit {
   titleInProgress = [];
   descriptionInProgress = []; 
   
-
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
@@ -45,7 +44,6 @@ export class TaskListComponent implements OnInit {
       } else if (field == 'description'){
         this.descriptionInProgress[i] = false;
       }
-      this.loadTasks();
   }
 
 
@@ -55,8 +53,10 @@ export class TaskListComponent implements OnInit {
 
 
   changeStatus(id: any){
-    let task = this.tasks.filter((task) => task.customIdName == id);
-    this.taskService.changeStatus(id, task);
+    let task: any = this.tasks.filter((task) => task.customIdName == id);
+    task.checked = true;
+    task.date = new Date().getTime();
+    this.taskService.saveChanges(id, task);
   }
 
 
