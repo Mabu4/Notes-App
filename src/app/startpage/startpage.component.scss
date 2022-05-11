@@ -1,77 +1,8 @@
 
-.notes {
+.startpage {
     display: flex;
     align-items: center;
     flex-direction: column;
-    .note-form {
-        max-width: 500px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .note-form-input-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            mat-form-field {
-                width: 300px;
-            }
-        }
-        @media(max-width: 500px){
-            flex-direction: column;
-        }
-    }
-    .tasks-container {
-        padding-top: 40px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        mat-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            max-width: 300px;
-            .checkbox-container {
-                height: 100%;
-                padding-right: 16px;
-            }
-            .delete-button {
-                z-index: -3;
-                margin-left: 20px;
-            }
-            &:hover{
-                .delete-button{
-                    z-index: 0;
-                }
-            }
-            .tasks-content{
-                display: flex;
-                button {
-                    margin-left: 20px;
-                    z-index: -3;
-                }
-                input {
-                    min-width: 100px;
-                }
-                textarea {
-                    resize: none;
-                }
-            }
-            @media(max-width: 500px){
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-.activeButton{
-    z-index: 0 !important;
-}
-
-.taskDone {
-    background-color: lightgray;
 }
 
 
