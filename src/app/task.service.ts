@@ -34,7 +34,7 @@ export class TaskService {
     this.firestore
     .collection('tasks')
     .doc(id)
-    .update(task[0]);
+    .update(task);
   }
 
 

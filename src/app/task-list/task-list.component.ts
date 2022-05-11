@@ -26,13 +26,8 @@ export class TaskListComponent implements OnInit {
     this.taskService.loadTasks().subscribe((tasks) => {
       this.unsortedTasks = tasks;
       console.log(this.unsortedTasks);
-      this.sortTasks();
+      this.tasks = this.taskService.sortTasks(this.unsortedTasks);
     });
-  }
-
-
-  sortTasks(){
-    this.tasks = this.taskService.sortTasks(this.unsortedTasks);
   }
 
 
@@ -54,9 +49,9 @@ export class TaskListComponent implements OnInit {
 
   changeStatus(id: any){
     let task: any = this.tasks.filter((task) => task.customIdName == id);
-    task.checked = true;
-    task.date = new Date().getTime();
-    this.taskService.saveChanges(id, task);
+    task[0].checked = true;
+    task[0].date = new Date().getTime();
+    this.taskService.saveChanges(id, task[0]);
   }
 
 
