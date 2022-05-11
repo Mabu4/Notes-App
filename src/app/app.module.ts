@@ -20,13 +20,17 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { TaskFormComponent } from './task-form/task-form.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StartpageComponent,
-    BinComponent
+    BinComponent,
+    TaskFormComponent,
+    TaskListComponent,
   ],
   imports: [
     BrowserModule,

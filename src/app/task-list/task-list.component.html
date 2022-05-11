@@ -1,0 +1,24 @@
+<section class="tasks-container">
+    <mat-card *ngFor="let note of tasks; let i = index" [class.taskDone]="note.checked">
+        <div class="checkbox-container">
+            <mat-checkbox [disabled]="note.checked" color="primary" [(ngModel)]="note.checked" (ngModelChange)="changeStatus(note.customIdName)"></mat-checkbox>
+        </div>
+        <div>
+            <h2 class="tasks-content">
+                <input [disabled]="note.checked" matInput type="text" [(ngModel)]="note['title']" (ngModelChange)="titleInProgress[i] = true; editText($event, i, 'title')">
+                <button (click)="saveChanges(note.customIdName, 'title', i)" [class.activeButton]="titleInProgress[i]" mat-mini-fab color="primary">
+                    <mat-icon>done</mat-icon>
+                </button>
+            </h2>
+            <p class="tasks-content">
+                <textarea [disabled]="note.checked" matInput type="text" [(ngModel)]="note['description']" (ngModelChange)="descriptionInProgress[i] = true; editText($event, i, 'description')"></textarea>
+                <button (click)="saveChanges(note.customIdName, 'description', i)" mat-mini-fab color="primary" [class.activeButton]="descriptionInProgress[i]">
+                    <mat-icon>done</mat-icon>
+                </button>
+            </p>
+        </div>
+        <button (click)="deleteTask(note.customIdName)" class="delete-button" mat-mini-fab color="warn">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card>
+</section>

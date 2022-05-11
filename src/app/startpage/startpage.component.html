@@ -1,43 +1,6 @@
 <div class="notes">
-    <mat-card class="note-form">
-        <div class="note-form-input-container">
-            <mat-form-field appearance="standard">
-                <mat-label>Titel</mat-label>
-                <input matInput [(ngModel)]="task.title">
-            </mat-form-field>
-            <mat-form-field appearance="standard">
-                <mat-label>Beschreibung</mat-label>
-                <input matInput [(ngModel)]="task.description">
-            </mat-form-field>
-        </div>
-        <div>
-            <button (click)="addTask()" mat-raised-button color="primary">Hinzufügen</button>
-        </div>
-    </mat-card>
-    <section class="tasks-container">
-        <mat-card *ngFor="let note of tasks; let i = index" [class.taskDone]="note.checked">
-            <div class="checkbox-container">
-                <mat-checkbox [disabled]="note.checked" color="primary" [(ngModel)]="note.checked" (ngModelChange)="changeStatus(i)"></mat-checkbox>
-            </div>
-            <div>
-                <h2 class="tasks-content">
-                    <input [disabled]="note.checked" matInput type="text" [ngModel]="note['title']" (ngModelChange)="titleInProgress[i] = true; editText($event, i, 'title')">
-                    <button (click)="saveChanges(i, 'title')" [class.activeButton]="titleInProgress[i]" mat-mini-fab color="primary">
-                        <mat-icon>done</mat-icon>
-                    </button>
-                </h2>
-                <p class="tasks-content">
-                    <textarea [disabled]="note.checked" matInput type="text" [ngModel]="note['description']" (ngModelChange)="descriptionInProgress[i] = true; editText($event, i, 'description')"></textarea>
-                    <button (click)="saveChanges(i, 'description')" mat-mini-fab color="primary" [class.activeButton]="descriptionInProgress[i]">
-                        <mat-icon>done</mat-icon>
-                    </button>
-                </p>
-            </div>
-            <button (click)="deleteTask(i)" class="delete-button" mat-mini-fab color="warn">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </mat-card>
-    </section>
+    <app-task-form></app-task-form>
+    <app-task-list></app-task-list>
 </div>
 
 

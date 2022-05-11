@@ -1,0 +1,15 @@
+<mat-card class="note-form">
+    <div class="note-form-input-container">
+        <mat-form-field appearance="standard">
+            <mat-label>Titel</mat-label>
+            <input matInput [(ngModel)]="task.title">
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+            <mat-label>Beschreibung</mat-label>
+            <input matInput [(ngModel)]="task.description">
+        </mat-form-field>
+    </div>
+    <div>
+        <button (click)="addTask()" mat-raised-button color="primary">Hinzufügen</button>
+    </div>
+</mat-card>
